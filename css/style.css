@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color:#9400D3;
+    display: flex;
+    justify-content:center;
+    padding:20px 0px;
+    font-style: italic;
+    text-transform: uppercase;
+    color:#fff;
+    border-bottom:16px solid #BA55D3;
+}
+
+header button{
+    margin-left:16px ;
+    background-color:#228B22;
+    border:none;
+    color:#fff;
+    font-weight:700;
+    padding:0px 10px;
+}
+
+form{
+    background-color: #c8d6e5;
+    padding: 24px 0px;
+    text-align: center;
+    display:none;
+}
+
+form h2{
+    margin-bottom: 16px;
+}
+
+input, button{
+    padding:8px;
+}
+
+button{
+    background-color:#228B22;
+    cursor:pointer;
+    font-weight:bold;
+    text-transform: uppercase;
+    border:none;
+    color:#fff;
+}
+
+#botao-cancelar{
+    background-color: red;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul li{
+    max-width:25%;
+    list-style: none;
+    position: relative;
+    max-height:200px;
+    overflow-y: hidden;
+}
+ul li img{
+    width:100%;
+
+}
+/*No caso acima, a largura da imagem era maior que o espaço do li que ela estava contida, sendo assim, colocamos a largura da imagem em 100%*/
+/*O máximo desse 100% foi contido em 25% que é o tanto que o li suporta, fazendo com que a imagem ocupe 100% de 25% e cabendo dentro*/
+
+.overlay-imagem-link{
+    padding:16px;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    opacity: 0;
+    transition:all ease .10s;
+}
+
+.overlay-imagem-link a{
+    color:#fff;
+    text-decoration: none;
+
+}
+
+ul li:hover .overlay-imagem-link{
+    opacity: 1;
+}
